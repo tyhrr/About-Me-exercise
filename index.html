@@ -6,7 +6,9 @@
     <title>Alan Salva WebSite</title>
 </head>
 <body>
-    
+
+    <!-- Navbar Section -->
+
     <nav>
         <a href="index.html">Home</a> |
         <a href="about.html">About me</a> |
@@ -14,27 +16,37 @@
         <a href="projects.html">Projects</a>
     </nav>
 
-    <div class="hero-section">
-        <h1>Welcome to Alan Salva's Website</h1> <br>
-        <img src="./assets/img/fotoperfil.png" alt="" height="400px"> 
-        <p>This is a simple HTML page.</p>
-        <p>Feel free to explore and learn more about me!</p>
-    </div>
+    <!-- Hero Section -->
 
-    <div class="Video-section">
-        <h2>My Introduction Video</h2>
-        <video height="600px" width="400px" controls>
-            <source src="./assets/videos/hello!.mp4" type="video/mp4">
-        </video>
-    </div>
+    <section class="hero-section">
+        <div class="hero">
+            <h1>Welcome to Alan Salva's Website</h1> <br>
+            <img src="./assets/img/fotoperfil.png" alt="" height="400px"> 
+            <p>This is a simple HTML page.</p>
+            <p>Feel free to explore and learn more about me!</p>
+        </div>
 
-    <div class="about-me-section">
-        <h2>About Me</h2>
-        <p>Hi, I'm Alan Salva. I'm passionate about web development and design.</p>
-        <p>Welcome to my personal portfolio! I'm Alan, a Python developer and data analysis student. I've worked on a variety of web projects, ranging from  <br> personal blogs to e-commerce platforms. I am seeking an opportunity to enhance and expand my knowledge and skills in the field of development.</p>
-    </div>
+        <div class="about-me-section">
+            <h2>About Me</h2>
+            <p>Hi, I'm Alan Salva. I'm passionate about web development and design.</p>
+            <p>Welcome to my personal portfolio! I'm Alan, a Python developer and data analysis student. I've worked on a variety of web projects, ranging from  <br> personal blogs to e-commerce platforms. I am seeking an opportunity to enhance and expand my knowledge and skills in the field of development.</p>
+        </div>
+        <div class="my-video">
+            <h2>My Introduction Video</h2>
+            <video height="600px" width="400px" controls>
+                <source src="./assets/videos/hello!.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
 
-    <div class="Hobbies-section">
+    <!-- Content Section -->
+
+    <section>
+    <h2>A Video I Love</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0KQ8tFrgqRQ?si=7nwa2ZvVsdForJJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <div class="hobbies-section">
         <h2>My Hobbies</h2>
         <ul>
             <li>Playing Video Games</li>
@@ -43,6 +55,36 @@
             <li>Playing Guitar</li>
         </ul>
     </div>
+
+    <section class="skills-section">
+        <h2>My Skills</h2>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Experience Level</th>
+                    <th>Learning Since</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Beginner</td>
+                    <td>September 2025</td>
+                </tr>
+                <tr>
+                    <td>Git</td>
+                    <td>Beginner</td>
+                    <td>September 2025</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>Fluent</td>
+                    <td>Since childhood</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <div class="projects-section">
         <h2>My Projects</h2>
@@ -58,6 +100,8 @@
 
     </div>
 
+    <!-- Footer Section -->
+     
     <footer>
         <p>Follow me on:</p>
             <a href="https://www.linkedin.com/in/alnsal" target="_blank">LinkedIn</a> | 
