@@ -1,0 +1,274 @@
+/** Font Sizes */
+
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-xlarge: 32px;
+}
+
+/* General Styles */
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-button {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  min-height: 80vh;
+  padding-bottom: 10vh;
+  background: linear-gradient(to right, #ffffff 0%, #000000 100%);
+  background-image: url('../img/layered-waves-haikei.svg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 500px;
+  gap: 3%;
+  padding: 5%;
+}
+
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 2;
+  margin-bottom: 5vh;
+}
+
+/* Box Text */
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-box-text-title {
+  max-width: 90%;
+  margin-bottom: 0;
+  width: 60%;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.hero-box-text-title h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+  line-height: 0.9;
+  text-transform: lowercase;
+}
+
+.hero-box-text-title h1 .accent {
+  color: #c36c33;
+}
+
+.hero-box-text {
+  background-color: transparent;
+  max-width: 90%;
+  margin-top: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  text-align: left;
+}
+
+.hero-box-text .text2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: lowercase;
+}
+
+.hero-box-text .text3 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: rgba(211, 211, 211, 0.6);
+  margin: 0.5rem 0 0 0;
+  line-height: 1.1;
+  text-transform: lowercase;
+}
+
+.hero-box-text .text3:hover {
+  color: #000000;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: flex-end;
+    margin-bottom: 8vh;
+  }
+
+  .hero-img {
+    width: 320px;
+    height: 320px;
+    transform: translateY(30px);
+  }
+
+  .hero-text {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    margin-bottom: 10vh;
+  }
+
+  .hero-img {
+    width: 350px;
+    height: 350px;
+    transform: translateY(40px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-content {
+    margin-bottom: 12vh;
+  }
+
+  .hero-img {
+    width: 380px;
+    height: 380px;
+    transform: translateY(50px);
+  }
+}
+
+
+.about-me-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.my-video-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Footer Styles */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0rem;
+}
+
+footer a:hover {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.footer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-btn i {
+    font-size: 1.2rem;
+    margin-right: 0;
+}
+
+footer i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+footer .fa-linkedin:hover {
+  transition: all 0.3s ease;
+  color: #0077b5; /* LinkedIn blue */
+}
+
+footer .fa-github:hover {
+  transition: all 0.3s ease;
+  color: #6e5494; /* GitHub purple */
+}
+
+footer .fa-envelope:hover {
+  transition: all 0.3s ease;
+  color: #b0b0b0; /* Envelope white */
+}
