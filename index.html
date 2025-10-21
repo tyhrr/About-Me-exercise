@@ -31,7 +31,19 @@
                     <p class="text3">scroll down.</p>
             </div>
         </div>
+            <svg class="arrow-down-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Flecha en forma de V apuntando hacia abajo -->
+        <!-- Ángulo interior de 30° significa que cada lado forma 75° con la vertical -->
+        <polyline 
+            points="13,60 100,110 187,60" 
+            fill="none" 
+            stroke="black" 
+            stroke-width="8"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </svg>
     </section>
+
 
     <!-- Footer Section -->
      
@@ -50,5 +62,26 @@
         </div>
         <p>&copy; 2024 Alan Salva. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Script para ocultar la flecha cuando se hace scroll
+        const arrow = document.querySelector('.arrow-down-svg');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                arrow.classList.add('hidden');
+            } else {
+                arrow.classList.remove('hidden');
+            }
+        });
+
+        // Opcional: hacer scroll suave al hacer click en la flecha
+        arrow.addEventListener('click', function() {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
