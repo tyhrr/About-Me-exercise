@@ -3,7 +3,7 @@
 ### 1️⃣ Identidad principal
 
 **Nombre:** NODORA
-**Tagline:** *turning vision into visual identity for change-makers and startups*
+**Tagline:** *turning ideas into visual identity for change-makers and startups*
 **Tipo de empresa:** Agencia de diseño y desarrollo web.
 **Misión:** Transformar ideas en identidades visuales con propósito.
 **Visión:** Ser el puente entre la creatividad y la funcionalidad digital, ayudando a startups y creadores a construir una presencia sólida y coherente.
@@ -45,7 +45,8 @@
   * *Regular / Medium*: texto de cuerpo, tagline, botones.
 * **Alternativa:** **Poppins**, si se busca un tono más tech o internacional.
 
-🧩 1. Contraste elegante / profesional
+* **Contrastes con la tipografia**
+Contraste elegante / profesional
 
 Para resaltar palabras clave con un toque editorial o de diseño fino.
 
@@ -57,14 +58,13 @@ Lora → Serif moderna, mantiene buena legibilidad y contraste equilibrado.
 
 Crimson Pro → Profesional, clásico, da autoridad.
 
-💡 Ejemplo:
+Ejemplo:
 turning (Poppins)
 vision (Playfair Display)
 into visual identity for
 change-makers (Cormorant Garamond)
 dream builders (Lora)
 
----
 
 ### 5️⃣ Estilo visual
 
