@@ -45,6 +45,25 @@
   * *Regular / Medium*: texto de cuerpo, tagline, botones.
 * **Alternativa:** **Poppins**, si se busca un tono más tech o internacional.
 
+🧩 1. Contraste elegante / profesional
+
+Para resaltar palabras clave con un toque editorial o de diseño fino.
+
+Playfair Display → Serif elegante, muy buen contraste con Montserrat/Poppins.
+
+Cormorant Garamond → Más artístico, ideal para destacar vision o dream builders.
+
+Lora → Serif moderna, mantiene buena legibilidad y contraste equilibrado.
+
+Crimson Pro → Profesional, clásico, da autoridad.
+
+💡 Ejemplo:
+turning (Poppins)
+vision (Playfair Display)
+into visual identity for
+change-makers (Cormorant Garamond)
+dream builders (Lora)
+
 ---
 
 ### 5️⃣ Estilo visual
