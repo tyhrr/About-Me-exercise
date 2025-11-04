@@ -175,7 +175,7 @@ a.nav-button {
 .text-container .ideas {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-style: italic;
     position: relative;
     top: 0.05em;
@@ -295,6 +295,7 @@ a.nav-button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
   margin: 20px;
+  background-color: #ccc;
 }
 
 
