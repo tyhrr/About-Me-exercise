@@ -86,12 +86,20 @@ body {
 .navbar-logo {
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .navbar-logo img {
     height: 65px;
     width: auto;
-    transition: opacity 0.5s ease;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.navbar-logo img.hamburger {
+    border: 2px solid var(--coral);
 }
 
 .navbar-logo img.fade-out {
@@ -118,6 +126,7 @@ a.nav-button {
     border-radius: 5px;
 }
 
+
 /* Hero Section */
 
 .hero {
@@ -132,6 +141,8 @@ a.nav-button {
   background-position: bottom;
   background-repeat: no-repeat;
   color: #fff;
+  min-height: 100vh;
+  padding: 6rem 1rem 1rem;
 }
 
 
@@ -150,9 +161,9 @@ a.nav-button {
     flex-direction: row;
     align-items: baseline;
     gap: 0.5rem;
-    font-size: var(--font-size-xlarge);
+    font-size: 1.5rem;
     flex-wrap: wrap;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .text-container > div {
@@ -164,7 +175,7 @@ a.nav-button {
 .text-container .vision {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: var(--font-size-xlarge);
+    font-size: 1.5rem;
     font-style: italic;
     position: relative;
     top: 0.05em;
@@ -173,14 +184,14 @@ a.nav-button {
 .text-container .change, .text-container .makers {
     font-family: 'Playfair Display', serif;
     font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xlarge);
+    font-size: 1.5rem;
     font-style: italic;
 }
 
 .text-container .dream, .text-container .builders {
     font-family: 'Lora', serif;
     font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xlarge);
+    font-size: 1.5rem;
 }
 
 .hero-text-container {
@@ -190,7 +201,7 @@ a.nav-button {
   z-index: 2;
   width: 100%;
   padding: 0 1rem;
-  transform: translateY(-100px);
+  max-width: 1400px;
 }
 
 .hero-box-text-title {
@@ -200,7 +211,7 @@ a.nav-button {
 }
 
 .hero-box-text-title h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #ffffff;
   margin: 0;
@@ -222,7 +233,7 @@ a.nav-button {
 }
 
 .hero-box-text .text2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 900;
   color: #ffffff;
   margin: 0;
@@ -231,7 +242,7 @@ a.nav-button {
 }
 
 .hero-box-text .text3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
   color: rgba(211, 211, 211, 0.6);
   margin: 0.5rem 0 0 0;
@@ -291,11 +302,11 @@ a.nav-button {
 
 .arrow-down-svg {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 66px;
   background-color: transparent;
   transition: opacity 0.3s ease, transform 0.3s ease;
   cursor: pointer;
@@ -415,6 +426,130 @@ footer i {
 ///////////////////////////
 /////////////////////////*/
 
+/* Hamburger Menu */
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+    position: relative;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: block;
+    position: absolute;
+}
+
+.hamburger-menu span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-menu span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-menu span:nth-child(3) {
+    bottom: 0;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+
+/* PANTALLAS MENORES DE 1000px - Menú Hamburguesa */
+@media (max-width: 999px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--bg-main);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .nav-button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* MÓVILES (hasta 767px) */
+@media (max-width: 767px) {
+  /* Hero Section */
+  .hero {
+    min-height: 85vh;
+    padding: 5rem 1rem 2rem;
+  }
+
+  .hero-text-container {
+    padding: 0 1rem;
+  }
+
+  .hero-box-text-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-container {
+    font-size: 1.5rem;
+  }
+
+  .hero-box-text .text3 {
+    font-size: 1rem;
+  }
+
+  /* Arrow SVG */
+  .arrow-down-svg {
+    width: 100px;
+    height: 66px;
+    bottom: 1.5rem;
+  }
+}
+
 /* TABLETS (768px en adelante) */
 @media (min-width: 768px) {
   /* Navbar */
@@ -439,8 +574,8 @@ footer i {
 
   /* Hero Section */
   .hero {
-    min-height: 80vh;
-    padding: 3rem 2rem;
+    min-height: 86vh;
+    padding: 4rem 2rem;
   }
 
   .hero-text-container {
@@ -448,15 +583,27 @@ footer i {
   }
 
   .hero-box-text-title h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
+  }
+
+  .text-container {
+    font-size: 2rem;
+  }
+
+  .text-container .vision,
+  .text-container .change, 
+  .text-container .makers,
+  .text-container .dream, 
+  .text-container .builders {
+    font-size: 2rem;
   }
 
   .hero-box-text .text2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero-box-text .text3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   /* Arrow SVG */
@@ -478,7 +625,7 @@ footer i {
   /* Hero Section */
 
   .hero {
-    min-height: 100vh;
+    min-height: 85vh;
     padding: 4rem 3rem;
   }
 
@@ -495,16 +642,28 @@ footer i {
     font-size: 5.5rem;
   }
 
+  .text-container {
+    font-size: 2.5rem;
+  }
+
+  .text-container .vision,
+  .text-container .change, 
+  .text-container .makers,
+  .text-container .dream, 
+  .text-container .builders {
+    font-size: 2.5rem;
+  }
+
   .hero-box-text {
     max-width: 80%;
   }
 
   .hero-box-text .text2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-box-text .text3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   /* Arrow SVG */
@@ -540,12 +699,24 @@ footer i {
     font-size: 6rem;
   }
 
+  .text-container {
+    font-size: 3rem;
+  }
+
+  .text-container .vision,
+  .text-container .change, 
+  .text-container .makers,
+  .text-container .dream, 
+  .text-container .builders {
+    font-size: 3rem;
+  }
+
   .hero-box-text .text2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .hero-box-text .text3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   /* Arrow SVG */
@@ -566,12 +737,24 @@ footer i {
     font-size: 7rem;
   }
 
+  .text-container {
+    font-size: 3.5rem;
+  }
+
+  .text-container .vision,
+  .text-container .change, 
+  .text-container .makers,
+  .text-container .dream, 
+  .text-container .builders {
+    font-size: 3.5rem;
+  }
+
   .hero-box-text .text2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .hero-box-text .text3 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
